@@ -1,0 +1,6 @@
+# Enable client-side routing for static Next.js export
+RewriteEngine On
+# If the request is not a file or directory, rewrite to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.html [L]
